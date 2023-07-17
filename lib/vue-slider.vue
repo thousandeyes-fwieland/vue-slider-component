@@ -349,7 +349,7 @@ export default defineComponent({
             [sizeStyleKey]: `${end - start}%`,
             transitionProperty: `${sizeStyleKey},${this.mainDirection}`,
             transitionDuration: `${this.animateTime}s`,
-            ...this.processStyle,
+            ...(this.processStyle as any),
             ...style,
           },
         }
